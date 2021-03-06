@@ -1,0 +1,109 @@
+<script>
+    'use strict';
+    (function () {
+        function init() {
+            var completedate = new Date();
+            var day = completedate.getDate();
+            day = day.toString();
+            var month = completedate.getMonth() + 1;
+            month = month.toString();
+            var year = completedate.getFullYear();
+            year = year.toString();
+            var completedate2 = (day + "." + month + "." + year);
+            document.getElementById('loc')
+                    .innerHTML = completedate2/*.toLocaleString('de-DE');*/
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            init();
+        });
+    }());
+</script>
+<script>
+    'use strict';
+    (function () {
+        function uhrzeit() {
+            var jetzt = new Date(),
+                    h = jetzt.getHours(),
+                    m = jetzt.getMinutes(),
+                    s = jetzt.getSeconds();
+            m = fuehrendeNull(m);
+            s = fuehrendeNull(s);
+            document.getElementById('uhr')
+                    .innerHTML = h + ':' + m + ':' + s;
+            setTimeout(uhrzeit, 500);
+        }
+
+        function fuehrendeNull(zahl) {
+            zahl = (zahl < 10 ? '0' : '') + zahl;
+            return zahl;
+        }
+        document.addEventListener('DOMContentLoaded', uhrzeit);
+    }());
+
+</script>
+<video id="videoBG" autoplay muted loop>
+    <source src="/static/videos/World.mp4" type="video/mp4">
+</video>
+<header class="fadeIn">
+    <button id="openL" class="openbtn" onclick="openNavLeft()">&#45;</button>
+    <h3 class="title" id="header">{{#channel}}{{name}}{{/channel}}</h3>
+    <button id="openR" class="openbtnright" onclick="openNavRight()">&#45;</button>
+</header>
+<div id="leftsidebar" class="sidebar fadeIn">
+    <a href="javascript:void(0)" id="closeL" class="closebtn" onclick="closeNavLeft()">&#215;</a>
+    <button id="openL" class="openbtn" onclick="openNavLeft()">&#45;</button>
+    <br>
+    <br>
+        <p><b><u>Overview</u></b></p>
+        <br>
+        {{#cchannellist}}
+            {{#each channels}}
+                <a href="{{url}}" id="channel" class="link">{{name}}</a>
+            {{/each}}
+        {{/cchannellist}}
+    <textarea id="newname" placeholder="Channel-Name"></textarea>
+    <!--<button class="create" type="button" onclick="createChannel('Test')"></button>-->
+    <a href="javascript:void(0)" class="create" onclick="createChannel()">&times;</a>
+</div>
+<div id="rightsidebar" class="sidebarright fadeIn">
+    <a href="javascript:void(0)" id="closeR" class="closebtn" onclick="closeNavRight()">&times;</a>
+    <br>
+    <br>
+    <p><b><u>Users</u></b></p>
+    {{#channel}}
+        {{#each users}}
+            <a class="user">{{autor}}</a>
+        {{/each}}
+    {{/channel}}
+</div>
+<div class="content fadeIn" id="content">
+    {{#channel}}
+        {{#each messages}}
+            <div class="post">
+                <img class="icon" src="/static/images/icon.png" alt="Icon">
+                <p class="autor">{{autor}}</p>
+                <p class="timestamp">{{timestamp}}</p>
+                <p class="message">{{text}}</p>
+            </div>
+        {{/each}}
+    {{/channel}}
+</div>
+<div><button id="openM" class="openbtnmessage" onclick="openMessage()">New Message</button></div>
+<div class="footer" id="Message">
+    <form method="post" action="/channels/{{#channel}}{{fname}}{{/channel}}">
+        <textarea class="name" name="autor" id="autor" placeholder="Username..."></textarea>
+        <a href="javascript:void(0)" id="closeM" class="closebtnMessage" onclick="closeMessage()">&times;</a>
+        <button class="buttontest" type="submit">Send</button>
+        <p></p>
+        <textarea class="newmessage" name="text" id="message" placeholder="Message..."></textarea>
+    </form>
+</div>
+<div class="footer2" id="news">
+    <p class="marquee">Aktuelles aus der Welt &nbsp;&nbsp;| &nbsp;&nbsp;Politik &nbsp;&nbsp;| &nbsp;&nbsp;Irgendwas ist hier doch immer los. &nbsp;Aber verplempern wir jetzt keine Zeit mit Politik ! &nbsp;&nbsp;| &nbsp;&nbsp;Sport &nbsp;&nbsp;| &nbsp;&nbsp;Ja, was soll man dazu noch sagen ? &nbsp;Es wird halt einfach nicht besser beim FC Schalke 04. &nbsp;Doch jede Krise findet meist auch ein Ende. &nbsp;&nbsp;| &nbsp;&nbsp;Deutschland &nbsp;&nbsp;| &nbsp;&nbsp;Auch Deutschland existiert noch immer. &nbsp;Mal sehen wie lange ! &nbsp;&nbsp;| &nbsp;&nbsp;Welt &nbsp;&nbsp;| &nbsp;&nbsp;Nachdem der Joker mal wieder einen Krieg in Gotham angezettelt hat, liegen die Nerven bei Batman, Robin, Catwomen, Batgirl und Co. blank. &nbsp;Kann dieser Terror denn nicht endlich mal aufhören ? &nbsp;&nbsp;| &nbsp;&nbsp;Wetter &nbsp;&nbsp;| &nbsp;&nbsp;Es ist Arschkalt ! &nbsp;Mehr muss man nicht dazu sagen, oder ?</p>
+</div>
+<div class="zeit">
+    <p id="loc" class="datum"></p>
+    <p id="uhr" class="uhrzeit"></p>
+</div>
+
+<script src="/static/scripts/specialfunctions.js"></script>

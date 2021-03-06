@@ -1,0 +1,20 @@
+{
+  "channels": [
+    {
+      "name": "World Domination Channel",
+      "url": "/channels/World_Domination"
+    },
+    {
+      "name": "Save the World Channel",
+      "url": "/channels/Save_the_World"
+    },
+    {
+      "name": "Channel Channel",
+      "url": "/channels/Channel_Channel"
+    },
+    {
+      "name": "Pokemon Channel",
+      "url": "/channels/Pokemon"
+    }
+  ]
+}

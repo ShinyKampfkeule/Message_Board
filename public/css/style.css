@@ -1,0 +1,434 @@
+body {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background: #434b53;
+}
+
+.post {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 0.5%;
+    border: 8px outset #2d2d2d;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+    width: auto;
+    height: auto;
+    background-image: linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
+    color: #ffffff;
+}
+
+.message {
+    text-align: left;
+    margin-left: 2%;
+    font-size: 25px;
+    word-wrap: break-word;
+    line-height: 40px;
+}
+
+.autor {
+    font-size: 30px;
+    margin-top: 1%;
+}
+
+.timestamp {
+    font-size: 20px;
+    margin-left: 1%;
+}
+
+.inputtable {
+    margin-right: 250px;
+
+}
+
+.footer {
+    background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
+    height: 25%;
+    position: fixed;
+    left: 12.1%;
+    bottom: 1%;
+    right: 12.1%;
+    border: 8px;
+    border-color: #2d2d2d;
+    border-style: outset;
+    border-radius: 25px;
+    opacity: 0%;
+}
+
+.info {
+    margin-right: 10px;
+}
+
+.name {
+    text-align: left;
+    width: 30%;
+    height: 40px;
+    resize: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 20px;
+    background-color: #2d2d2d;
+    line-height: 40px;
+    padding-left: 1%;
+    color: #ffffff;
+    position: absolute;
+    left: 0.5%;
+    top: 3%;
+    border-style: inset;
+    border: 100%;
+}
+
+.buttontest {
+    width: 9%;
+    height: 15%;
+    border-radius: 25px;
+    background-color: #2d2d2d;
+    outline: none;
+    color: #ffffff;
+    position: absolute;
+    right: 0.3%;
+    top: 60%;
+    font-size: 25px;
+}
+
+    .buttontest:active {
+        transform: translate(5%, 5%);
+    }
+
+.newmessage {
+    text-align: left;
+    width: 88%;
+    height: 75%;
+    resize: initial;
+    border-radius: 25px;
+    outline: transparent;
+    font-size: 20px;
+    background-color: #2d2d2d;
+    line-height: 40px;
+    padding-left: 1%;
+    color: #ffffff;
+    left: 0.5%;
+    top: 20%;
+    position: absolute;
+    border-style: inset;
+    border: 100%;
+}
+
+header {
+    text-align: left;
+    font-size: 40px;
+    height: 8%;
+    line-height: 20%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 99.4%;
+    z-index: 9001;
+    border: 8px;
+    border-color: #2d2d2d;
+    border-style: outset;
+    background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
+}
+
+.title {
+    margin-left: 13%;
+    position: absolute;
+    color: #ffffff;
+}
+
+.sidebar {
+    background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
+    height: 82%;
+    width: 10%;
+    position: fixed;
+    z-index: 9000;
+    top: 10.2%;
+    left: 0.5%;
+    overflow: hidden;
+    border: 8px;
+    border-color: #2d2d2d;
+    border-style: outset;
+    border-radius: 25px;
+}
+
+.sidebar p {
+    padding: 6px 8px 6px 16px;
+    font-size: 35px;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+}
+
+.sidebar .link {
+    padding: 6px 8px 6px 16px;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    line-height: 200%;
+    text-decoration: none;
+}
+
+.sidebar .link:hover {
+    background-color: #000000;
+    line-height: 200%;
+    text-decoration: none;
+}
+
+.sidebar .link:active {
+    background-color: #000000;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    top: 0%;
+    right: 0%;
+    outline: transparent;
+    color: #ffffff;
+    border-style: none;
+    border-radius: 15px;
+    padding: 8px 10px;
+    text-decoration: none;
+}
+
+.openbtn {
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border-style: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    top: 111%;
+    left: 0.3%;
+    outline: transparent;
+    opacity: 0%;
+}
+
+.sidebarright {
+    background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
+    height: 82%;
+    width: 10%;
+    position: fixed;
+    z-index: 9000;
+    top: 10.2%;
+    right: 0.5%;
+    overflow: hidden;
+    border: 8px;
+    border-color: #2d2d2d;
+    border-style: outset;
+    border-radius: 25px;
+}
+.sidebarright a {
+    padding: 6px 8px 6px 16px;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+}
+
+.sidebarright p {
+    padding: 6px 8px 6px 16px;
+    font-size: 35px;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+}
+
+.openbtnright {
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border-style: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    top: 111%;
+    right: 0.3%;
+    outline: transparent;
+    opacity: 0%;
+    display: none;
+}
+
+.sidebarright .closebtn {
+    position: absolute;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    top: 0%;
+    right: 0%;
+    outline: transparent;
+    color: #ffffff;
+    border-style: none;
+    border-radius: 15px;
+    padding: 8px 10px;
+    text-decoration: none;
+}
+
+.content {
+    height: 82.5%;
+    top: 10.2%;
+    width: 76%;
+    margin-left: 11.8%;
+    /*background-color: #ff0000;*/
+    position: absolute;
+    overflow-y: scroll;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebarrighttext {
+    line-height: 200%;
+    text-decoration: none;
+    padding: 6px 8px 6px 16px;
+    font-size: 35px;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+}
+
+.icon {
+    border-radius: 50%;
+    height: 2.5%;
+    width: 2.5%;
+    float: left;
+    margin-right: 1%;
+    margin-top: 0.5%;
+    margin-left: 0.5%;
+}
+
+u {
+    color: #ffffff;
+}
+
+#videoBG {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    top: 0%;
+    left: 0%;
+}
+
+.fadeIn {
+    -webkit-animation: einblenden 3s;
+}
+
+@-webkit-keyframes einblenden {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+
+.openbtnmessage {
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    top: 94%;
+    left: 0.5%;
+    outline: transparent;
+    z-index: 9005;
+    border: 8px;
+    border-color: #2d2d2d;
+    border-style: outset;
+    border-radius: 25px;
+    background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
+    width: 10.5%;
+    height: 5%;
+}
+
+.closebtnMessage {
+    font-size: 35px;
+    cursor: pointer;
+    position: absolute;
+    top: 1%;
+    right: 0.5%;
+    outline: transparent;
+    z-index: 9005;
+    text-decoration: none;
+    outline: none;
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+.footer2 {
+    background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
+    height: 4%;
+    position: fixed;
+    left: 12.1%;
+    bottom: 1%;
+    right: 12.1%;
+    border: 8px;
+    border-color: #2d2d2d;
+    border-style: outset;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.marquee {
+    font-size: 25px;
+    position: absolute;
+    line-height: 0px;
+    left: 0.5%;
+    color: #ffffff;
+    -webkit-transform: translateX(100%);
+    -webkit-animation: scroll-left 120s linear infinite;
+    white-space: nowrap;
+}
+
+@-webkit-keyframes scroll-left {
+    0% {
+        -webkit-transform: translateX(45%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+.uhrzeit {
+    position: absolute;
+    right: 5%;
+}
+
+.datum {
+    position: absolute;
+    left: 5%;
+}
+
+.zeit {
+    position: absolute;
+    bottom: 1%;
+    right: 0.5%;
+    color: #ffffff;
+    background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
+    border: 8px;
+    border-color: #2d2d2d;
+    border-style: outset;
+    border-radius: 25px;
+    height: 4%;
+    width: 10%;
+    font-size: 32px;
+    line-height: 0%;
+}
+
+.user {
+    padding: 6px 8px 6px 16px;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.create {
+    width: 20%;
+    height: 20%;
+    position: absolute;
+}
