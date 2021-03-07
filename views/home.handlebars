@@ -58,12 +58,13 @@
         <br>
         {{#cchannellist}}
             {{#each channels}}
-                <a href="{{url}}" id="channel" class="link">{{name}}</a>
+                <a href="{{url}}" id="channel" class="link">{{channelname}}</a>
             {{/each}}
         {{/cchannellist}}
-    <textarea id="newname" placeholder="Channel-Name"></textarea>
-    <!--<button class="create" type="button" onclick="createChannel('Test')"></button>-->
-    <a href="javascript:void(0)" class="create" onclick="createChannel()">&times;</a>
+    <form id="fuckyou" method="post" action="/newFile">
+        <textarea id="newname" name="newname" placeholder="Channel-Name"></textarea>
+        <button class="create" type="submit">&times;</button>
+    </form>
 </div>
 <div id="rightsidebar" class="sidebarright fadeIn">
     <a href="javascript:void(0)" id="closeR" class="closebtn" onclick="closeNavRight()">&times;</a>

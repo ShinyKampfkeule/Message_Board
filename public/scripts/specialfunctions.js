@@ -46,15 +46,13 @@ function closeMessage() {
     document.getElementById("news").style.opacity = "100%";
 }
 
-function createChannel() {
-    const express = require('express');
-    const {readFile, writeFile, existsSync} = require ('fs');
-    const path = require('path');
-    const exphbs = require('express-handlebars');
-    let input = document.getElementById("newname")
+/*function createChannel() {
+    fs.writeFile
+    console.log("test");
+}
+    /*let input = document.getElementById("newname")
     let channelName = input.value;
     console.log(channelName);
-    createChannel()
     /*let filepath = path.join(CHANNEL_DIR, channelName, '.json');
 
     readFile(templatefilepath, FILE_OPTIONS, (error, text) => {
@@ -73,4 +71,3 @@ function createChannel() {
     fs.writeFile(filepath, filecontent, (error) => {
         if (error) throw error;
     })*/
-}

@@ -15,9 +15,11 @@ app.set('view engine', 'handlebars');
 app.use('/static', express.static('./public'));
 app.use(express.urlencoded());
 
-let standardChannelName = 'World_Domination'
+let standardChannelName = 'World_Domination';
 let channelFileName = path.join(CHANNEL_DIR, `World_Domination.json`);
 let cchannellist = 0;
+let templatefilepath = path.join(CHANNEL_DIR, `channel_template.json`);
+let channellistpath = path.join(CHANNEL_DIR, `Channel_List.json`);
 
 app.get('/', (request, response) => {
     response.redirect('/channels/World_Domination');
@@ -34,7 +36,6 @@ app.get('/channels/:channelName/', (request, response) => {
         }
 
         cchannellist = JSON.parse(text);
-        console.log(cchannellist);
     })
 
     const {channelName} = request.params;
@@ -74,6 +75,7 @@ app.post('/channels/:channelName/', (request, response) => {
         timestamp
     }
 
+
     const nickn = {
         autor
     }
@@ -108,23 +110,133 @@ app.post('/channels/:channelName/', (request, response) => {
             if (error) {
                 response.status(500).end();
             } else {
-                //response.redirect(`/channels/${channelFileName}`);
                 response.redirect(`/channels/${standardChannelName}`);
             }
         })
     })
 })
 
+app.post('/newFile/', (request, response) => {
+    let channelname = request.body.newname;
+    let filepath = path.join(CHANNEL_DIR, `${channelname}.json`);
+    const url = `/channels/${channelname}`;
+
+    const channeli = {
+        channelname,
+        url
+    }
+
+    readFile(channellistpath, FILE_OPTIONS,  (error, datas) => {
+
+        if (error) {
+            response.status(500).end();
+            return
+        }
+
+        const content = JSON.parse(datas);
+
+        content.channels.push(channeli);
+
+        console.log(content);
+
+        writeFile(channellistpath, JSON.stringify(content, null, 2) , FILE_OPTIONS, (error) => {
+            if (error) {
+                response.status(500).end();
+            }
+        })
+
+
+        readFile(templatefilepath, FILE_OPTIONS, (error, data) => {
+
+            if (error) {
+                response.status(500).end();
+                return
+            }
+
+            let filecontent = JSON.parse(data);
+            filecontent.name = channelname;
+            filecontent.fname = channelname;
+
+            writeFile(filepath, JSON.stringify(filecontent, null, 2) , FILE_OPTIONS, (error) => {
+                if (error) {
+                    response.status(500).end();
+                } else {
+                    response.redirect(`/channels/${channelname}`);
+                }
+            })
+        })
+    })
+})
+
+        /*writeFile(filepath, JSON.stringify(filecontent, null, 2) , FILE_OPTIONS, (error) => {
+            if (error) {
+                response.status(500).end();
+            } else {
+                response.redirect(`/channels/${channelName}`);
+            }
+        })
+
+        readFile(channelFileName, FILE_OPTIONS, (error, text) => {
+
+            if (error) {
+                response.status(500).end();
+                return
+            }
+
+            const messages = JSON.parse(text);
+
+            messages.messages.unshift(message);
+
+            let treffer = false;
+
+            while (treffer === false) {
+                messages.users.forEach(element => {
+                    if (element.autor === nickn.autor) {
+                        treffer = true;
+                    }
+                })
+
+                if (treffer === false) {
+                    messages.users.push(nickn);
+                    treffer = true;
+                }
+            }*/
+
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+console.log(`Example app listening at http://localhost:${port}`);
 })
 
 function time () {
-    var completedate = new Date();
-    completedate = completedate.toLocaleString('de-DE');
-    return completedate;
+var completedate = new Date();
+completedate = completedate.toLocaleString('de-DE');
+return completedate;
 }
 
 //let channelName = "Test" + ".json"
 //let filepath = path.join(CHANNEL_DIR, channelName)
 //console.log(filepath);
+
+/*function createChannel() {
+console.log(test);
+/*let input = document.getElementById("newname")
+let channelName = input.value;
+console.log(channelName);
+/*let filepath = path.join(CHANNEL_DIR, channelName, '.json');
+
+readFile(templatefilepath, FILE_OPTIONS, (error, text) => {
+
+    if (error) {
+        response.status(500).end();
+        return
+    }
+
+    const filecontent = JSON.parse(text);
+
+    console.log(filecontent);
+
+})
+
+fs.writeFile(filepath, filecontent, (error) => {
+    if (error) throw error;
+})
+}*/
