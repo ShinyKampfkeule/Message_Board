@@ -137,14 +137,11 @@ app.post('/newFile/', (request, response) => {
 
         content.channels.push(channeli);
 
-        console.log(content);
-
         writeFile(channellistpath, JSON.stringify(content, null, 2) , FILE_OPTIONS, (error) => {
             if (error) {
                 response.status(500).end();
             }
         })
-
 
         readFile(templatefilepath, FILE_OPTIONS, (error, data) => {
 

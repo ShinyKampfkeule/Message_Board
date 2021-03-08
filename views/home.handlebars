@@ -45,37 +45,46 @@
     <source src="/static/videos/World.mp4" type="video/mp4">
 </video>
 <header class="fadeIn">
-    <button id="openL" class="openbtn" onclick="openNavLeft()">&#45;</button>
     <h3 class="title" id="header">{{#channel}}{{name}}{{/channel}}</h3>
-    <button id="openR" class="openbtnright" onclick="openNavRight()">&#45;</button>
 </header>
+<div id="openls" class="openls">
+    <button id="openL" class="openbtn" onclick="openNavLeft()">&#45;</button>
+</div>
 <div id="leftsidebar" class="sidebar fadeIn">
     <a href="javascript:void(0)" id="closeL" class="closebtn" onclick="closeNavLeft()">&#215;</a>
-    <button id="openL" class="openbtn" onclick="openNavLeft()">&#45;</button>
     <br>
     <br>
-        <p><b><u>Overview</u></b></p>
-        <br>
+    <p id="allchannels"><b>All Channels</b></p>
+    <hr class="linetop" id="linet">
+    <div class="links" id="links">
         {{#cchannellist}}
             {{#each channels}}
                 <a href="{{url}}" id="channel" class="link">{{channelname}}</a>
             {{/each}}
         {{/cchannellist}}
-    <form id="fuckyou" method="post" action="/newFile">
-        <textarea id="newname" name="newname" placeholder="Channel-Name"></textarea>
-        <button class="create" type="submit">&times;</button>
+    </div>
+    <hr class="linebottom" id="lineb">
+    <form id="newChannel" class="newChannel" method="post" action="/newFile">
+        <textarea class = "newname" id="newname" name="newname" placeholder="New Channel Name" maxlength="30"></textarea>
+        <button class="create" type="submit">Create</button>
     </form>
+</div>
+<div id="openrs" class="openrs">
+    <button id="openR" class="openbtnright" onclick="openNavRight()">&#45;</button>
 </div>
 <div id="rightsidebar" class="sidebarright fadeIn">
     <a href="javascript:void(0)" id="closeR" class="closebtn" onclick="closeNavRight()">&times;</a>
     <br>
     <br>
-    <p><b><u>Users</u></b></p>
-    {{#channel}}
-        {{#each users}}
-            <a class="user">{{autor}}</a>
-        {{/each}}
-    {{/channel}}
+    <p class="rsheader"><b>Users</b></p>
+    <hr class="rsline">
+    <div class="userlist">
+        {{#channel}}
+            {{#each users}}
+                <p class="user">{{autor}}</p>
+            {{/each}}
+        {{/channel}}
+    </div>
 </div>
 <div class="content fadeIn" id="content">
     {{#channel}}
@@ -89,12 +98,14 @@
         {{/each}}
     {{/channel}}
 </div>
-<div><button id="openM" class="openbtnmessage" onclick="openMessage()">New Message</button></div>
-<div class="footer" id="Message">
+<div>
+    <button id="openM" class="openbtnmessage" onclick="openMessage()">New Message</button>
+</div>
+<div class="footer" id="MessageAll">
     <form method="post" action="/channels/{{#channel}}{{fname}}{{/channel}}">
         <textarea class="name" name="autor" id="autor" placeholder="Username..."></textarea>
         <a href="javascript:void(0)" id="closeM" class="closebtnMessage" onclick="closeMessage()">&times;</a>
-        <button class="buttontest" type="submit">Send</button>
+        <button class="sendmessage" type="submit">Send</button>
         <p></p>
         <textarea class="newmessage" name="text" id="message" placeholder="Message..."></textarea>
     </form>

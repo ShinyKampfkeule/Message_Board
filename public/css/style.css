@@ -1,3 +1,5 @@
+/* HTML-Body */
+
 body {
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -5,114 +7,18 @@ body {
     background: #434b53;
 }
 
-.post {
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-top: 0.5%;
-    border: 8px outset #2d2d2d;
-    -webkit-border-top-left-radius: 20px;
-    -webkit-border-bottom-right-radius: 20px;
-    width: auto;
-    height: auto;
-    background-image: linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
-    color: #ffffff;
-}
+/* Video-Background */
 
-.message {
-    text-align: left;
-    margin-left: 2%;
-    font-size: 25px;
-    word-wrap: break-word;
-    line-height: 40px;
-}
-
-.autor {
-    font-size: 30px;
-    margin-top: 1%;
-}
-
-.timestamp {
-    font-size: 20px;
-    margin-left: 1%;
-}
-
-.inputtable {
-    margin-right: 250px;
-
-}
-
-.footer {
-    background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
-    height: 25%;
+#videoBG {
     position: fixed;
-    left: 12.1%;
-    bottom: 1%;
-    right: 12.1%;
-    border: 8px;
-    border-color: #2d2d2d;
-    border-style: outset;
-    border-radius: 25px;
-    opacity: 0%;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    top: 0%;
+    left: 0%;
 }
 
-.info {
-    margin-right: 10px;
-}
-
-.name {
-    text-align: left;
-    width: 30%;
-    height: 40px;
-    resize: none;
-    border-radius: 25px;
-    outline: none;
-    font-size: 20px;
-    background-color: #2d2d2d;
-    line-height: 40px;
-    padding-left: 1%;
-    color: #ffffff;
-    position: absolute;
-    left: 0.5%;
-    top: 3%;
-    border-style: inset;
-    border: 100%;
-}
-
-.buttontest {
-    width: 9%;
-    height: 15%;
-    border-radius: 25px;
-    background-color: #2d2d2d;
-    outline: none;
-    color: #ffffff;
-    position: absolute;
-    right: 0.3%;
-    top: 60%;
-    font-size: 25px;
-}
-
-    .buttontest:active {
-        transform: translate(5%, 5%);
-    }
-
-.newmessage {
-    text-align: left;
-    width: 88%;
-    height: 75%;
-    resize: initial;
-    border-radius: 25px;
-    outline: transparent;
-    font-size: 20px;
-    background-color: #2d2d2d;
-    line-height: 40px;
-    padding-left: 1%;
-    color: #ffffff;
-    left: 0.5%;
-    top: 20%;
-    position: absolute;
-    border-style: inset;
-    border: 100%;
-}
+/* Header on Top */
 
 header {
     text-align: left;
@@ -131,11 +37,47 @@ header {
     background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
 }
 
+/* current Channel-Name */
+
 .title {
     margin-left: 13%;
     position: absolute;
     color: #ffffff;
 }
+
+/* General for "Open left Sidebar"-Button */
+
+.openls {
+    display: none;
+    width: 1%;
+    height: 1%;
+    position: fixed;
+    z-index: 9000;
+    top: 10.2%;
+    left: 0.5%;
+    border: 8px;
+    border-color: #2d2d2d;
+    border-style: outset;
+    border-radius: 25px;
+    background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
+}
+
+/* Open Button for left Sidebar */
+
+.openbtn {
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: transparent;
+    line-height: 0;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+}
+
+/* Left Sidebar */
 
 .sidebar {
     background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
@@ -145,22 +87,90 @@ header {
     z-index: 9000;
     top: 10.2%;
     left: 0.5%;
-    overflow: hidden;
     border: 8px;
     border-color: #2d2d2d;
     border-style: outset;
     border-radius: 25px;
+    display: initial;
 }
 
+/* Hovering over Links */
+
+.sidebar .link:hover {
+    background-color: #000000;
+    line-height: 200%;
+    text-decoration: none;
+}
+
+/* Active Link (!!!NOT WORKING RIGHT NOW!!!) */
+
+.sidebar .link:active {
+    background-color: #000000;
+}
+
+/* Close Button for left Sidebar */
+
+.sidebar .closebtn {
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    outline: transparent;
+    color: #ffffff;
+    border-style: none;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 3%;
+}
+
+/* p-Element in left Sidebar */
+
 .sidebar p {
-    padding: 6px 8px 6px 16px;
-    font-size: 35px;
+    font-size: 40px;
     color: #ffffff;
     display: block;
     text-align: center;
+    position: fixed;
+    left: 1.5%;
 }
 
-.sidebar .link {
+/* Line above Channels */
+
+.linetop {
+    position: fixed;
+    left: 1%;
+    width: 9.5%;
+    top: 22%;
+}
+
+/* Channel-Links inside left Sidebar */
+
+.links {
+    height: 75.5%;
+    width: 95%;
+    overflow-y: scroll;
+    position: absolute;
+    top: 14.6%;
+    left: 2.5%;
+    text-align: center;
+}
+
+/* li-Element in left Sidebar */
+
+.sidebar li {
+    width: 100%;
+    list-style-type: none;
+    float: left;
+}
+
+/* General for Channel-Links inside left Sidebar - deactivate visible Scrollbar */
+
+.links::-webkit-scrollbar {
+    display: none;
+}
+
+/* Single Link inside left Sidebar */
+
+.links .link {
     padding: 6px 8px 6px 16px;
     font-size: 20px;
     color: #ffffff;
@@ -170,44 +180,86 @@ header {
     text-decoration: none;
 }
 
-.sidebar .link:hover {
-    background-color: #000000;
-    line-height: 200%;
-    text-decoration: none;
+/* Line under Channels */
+
+.linebottom {
+    position: fixed;
+    left: 1%;
+    width: 9.5%;
+    top: 84%;
 }
 
-.sidebar .link:active {
-    background-color: #000000;
+/* General for new Channel */
+
+.newChannel {
+    display: initial;
 }
 
-.sidebar .closebtn {
-    position: absolute;
-    font-size: 30px;
-    background-color: rgba(0, 0, 0, 0);
-    top: 0%;
-    right: 0%;
+/* Texteara for new Channel-Name */
+
+.newname {
+    resize: initial;
+    border-radius: 25px;
     outline: transparent;
+    background-color: #2d2d2d;
     color: #ffffff;
-    border-style: none;
-    border-radius: 15px;
-    padding: 8px 10px;
-    text-decoration: none;
+    border-style: inset;
+    border: 100%;
+    text-align: center;
+    vertical-align: center;
+    position: absolute;
+    top: 92%;
+    left: 2%;
+    width: 94%;
 }
 
-.openbtn {
+/* Submit Button for creating new Channel */
+
+.create {
+    width: 50%;
+    height: 3%;
+    position: absolute;
+    border-radius: 25px;
+    background-color: #2d2d2d;
+    outline: none;
+    color: #ffffff;
+    top: 96%;
+    left: 25%;
+}
+
+/* General for "Open right Sidebar"-Button */
+
+.openrs {
+    display: none;
+    width: 1%;
+    height: 1%;
+    position: fixed;
+    z-index: 9000;
+    top: 10.2%;
+    right: 0.5%;
+    border: 8px;
+    border-color: #2d2d2d;
+    border-style: outset;
+    border-radius: 25px;
+    background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
+}
+
+/* Open Button for right Sidebar */
+
+.openbtnright {
     font-size: 25px;
     cursor: pointer;
     color: white;
-    padding: 10px 15px;
-    border-radius: 15px;
-    border-style: none;
-    position: absolute;
     background-color: rgba(0, 0, 0, 0);
-    top: 111%;
-    left: 0.3%;
+    border: none;
     outline: transparent;
-    opacity: 0%;
+    line-height: 0;
+    position: absolute;
+    left: 10%;
+    top: 30%;
 }
+
+/* Right Sidebar */
 
 .sidebarright {
     background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
@@ -223,74 +275,97 @@ header {
     border-style: outset;
     border-radius: 25px;
 }
-.sidebarright a {
-    padding: 6px 8px 6px 16px;
-    color: #ffffff;
-    display: block;
-    text-align: center;
-}
 
-.sidebarright p {
-    padding: 6px 8px 6px 16px;
-    font-size: 35px;
-    color: #ffffff;
-    display: block;
-    text-align: center;
-}
+/* Close Button for right Sidebar */
 
-.openbtnright {
-    font-size: 25px;
-    cursor: pointer;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 15px;
+.sidebarright .closebtn {
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    outline: transparent;
+    color: #ffffff;
     border-style: none;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0);
-    top: 111%;
-    right: 0.3%;
-    outline: transparent;
-    opacity: 0%;
+    top: 0%;
+    right: 3%;
+    text-decoration: none;
+}
+
+/* Header in right Sidebar */
+
+.rsheader {
+    padding: 6px 8px 6px 16px;
+    font-size: 40px;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+}
+
+/* Line over User-List */
+
+.rsline {
+    position: fixed;
+    right: 1%;
+    width: 9.5%;
+    top: 22%;
+}
+
+/* User-List inside right Sidebar */
+
+.userlist {
+    height: 90%;
+    overflow-y: scroll;
+    top: 15%;
+}
+
+/* General for User-List inside right Sidebar - deactivate visible Scrollbar */
+
+.userlist::-webkit-scrollbar {
     display: none;
 }
 
-.sidebarright .closebtn {
-    position: absolute;
-    font-size: 30px;
-    background-color: rgba(0, 0, 0, 0);
-    top: 0%;
-    right: 0%;
-    outline: transparent;
+/* User-List in right Sidebar */
+
+.user {
+    padding: 6px 8px 6px 16px;
+    font-size: 20px;
     color: #ffffff;
-    border-style: none;
-    border-radius: 15px;
-    padding: 8px 10px;
-    text-decoration: none;
+    display: block;
+    text-align: center;
 }
+
+/* General for Message-Content */
 
 .content {
     height: 82.5%;
     top: 10.2%;
     width: 76%;
     margin-left: 11.8%;
-    /*background-color: #ff0000;*/
     position: absolute;
     overflow-y: scroll;
 }
+
+/* General for Message-Content - Hide Scrollbar */
 
 .content::-webkit-scrollbar {
     display: none;
 }
 
-.sidebarrighttext {
-    line-height: 200%;
-    text-decoration: none;
-    padding: 6px 8px 6px 16px;
-    font-size: 35px;
+/* General for every single Post */
+
+.post {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 0.5%;
+    border: 8px outset #2d2d2d;
+    -webkit-border-top-left-radius: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+    width: auto;
+    height: auto;
+    background-image: linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
     color: #ffffff;
-    display: block;
-    text-align: center;
 }
+
+/* General for displayed Icon */
 
 .icon {
     border-radius: 50%;
@@ -302,27 +377,31 @@ header {
     margin-left: 0.5%;
 }
 
-u {
-    color: #ffffff;
+/* Style for displayed Autor */
+
+.autor {
+    font-size: 30px;
+    margin-top: 1%;
 }
 
-#videoBG {
-    position: fixed;
-    z-index: -1;
-    width: 100%;
-    height: auto;
-    top: 0%;
-    left: 0%;
+/* Style for displayed Timestamp */
+
+.timestamp {
+    font-size: 20px;
+    margin-left: 1%;
 }
 
-.fadeIn {
-    -webkit-animation: einblenden 3s;
+/* Style for displayed Message */
+
+.message {
+    text-align: left;
+    margin-left: 2%;
+    font-size: 25px;
+    word-wrap: break-word;
+    line-height: 40px;
 }
 
-@-webkit-keyframes einblenden {
-    from { opacity:0; }
-    to { opacity:1; }
-}
+/* Button for opening "New Message"-Area */
 
 .openbtnmessage {
     font-size: 15px;
@@ -344,6 +423,45 @@ u {
     height: 5%;
 }
 
+/* General Settings for Footer */
+
+.footer {
+    background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
+    height: 25%;
+    position: fixed;
+    left: 12.1%;
+    bottom: 1%;
+    right: 12.1%;
+    border: 8px;
+    border-color: #2d2d2d;
+    border-style: outset;
+    border-radius: 25px;
+    display: none;
+}
+
+/* Style of "Input Name"-Area */
+
+.name {
+    text-align: left;
+    width: 30%;
+    height: 40px;
+    resize: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 20px;
+    background-color: #2d2d2d;
+    line-height: 40px;
+    padding-left: 1%;
+    color: #ffffff;
+    position: absolute;
+    left: 0.5%;
+    top: 3%;
+    border-style: inset;
+    border: 100%;
+}
+
+/* Style for "Close Message"-Button */
+
 .closebtnMessage {
     font-size: 35px;
     cursor: pointer;
@@ -358,6 +476,50 @@ u {
     border-radius: 15px;
 }
 
+/* Submit-Button for new Message */
+
+.sendmessage {
+    width: 9%;
+    height: 15%;
+    border-radius: 25px;
+    background-color: #2d2d2d;
+    outline: none;
+    color: #ffffff;
+    position: absolute;
+    right: 0.3%;
+    top: 60%;
+    font-size: 25px;
+}
+
+/* Animated Button-Press */
+
+.sendmessage:active {
+    transform: translate(5%, 5%);
+}
+
+/* Style for Message Area */
+
+.newmessage {
+    text-align: left;
+    width: 88%;
+    height: 75%;
+    resize: initial;
+    border-radius: 25px;
+    outline: transparent;
+    font-size: 20px;
+    background-color: #2d2d2d;
+    line-height: 40px;
+    padding-left: 1%;
+    color: #ffffff;
+    left: 0.5%;
+    top: 20%;
+    position: absolute;
+    border-style: inset;
+    border: 100%;
+}
+
+/* General for News-Feed */
+
 .footer2 {
     background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
     height: 4%;
@@ -370,12 +532,15 @@ u {
     border-style: outset;
     border-radius: 25px;
     overflow: hidden;
+    display: initial;
 }
+
+/* Animation for News-Feed */
 
 .marquee {
     font-size: 25px;
     position: absolute;
-    line-height: 0px;
+    line-height: 50%;
     left: 0.5%;
     color: #ffffff;
     -webkit-transform: translateX(100%);
@@ -383,24 +548,7 @@ u {
     white-space: nowrap;
 }
 
-@-webkit-keyframes scroll-left {
-    0% {
-        -webkit-transform: translateX(45%);
-    }
-    100% {
-        -webkit-transform: translateX(-100%);
-    }
-}
-
-.uhrzeit {
-    position: absolute;
-    right: 5%;
-}
-
-.datum {
-    position: absolute;
-    left: 5%;
-}
+/* General for showing Date/Time */
 
 .zeit {
     position: absolute;
@@ -415,20 +563,47 @@ u {
     height: 4%;
     width: 10%;
     font-size: 32px;
-    line-height: 0%;
+    line-height: 1%;
 }
 
-.user {
-    padding: 6px 8px 6px 16px;
-    font-size: 20px;
-    color: #ffffff;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-}
+/* Individual for Date */
 
-.create {
-    width: 20%;
-    height: 20%;
+.datum {
     position: absolute;
+    left: 5%;
 }
+
+/* Individual for Time */
+
+.uhrzeit {
+    position: absolute;
+    right: 5%;
+}
+
+/* Fade In specific elements */
+
+.fadeIn {
+    -webkit-animation: einblenden 3s;
+}
+
+/* Keyframe for Fade In */
+
+@-webkit-keyframes einblenden {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+
+/* Keyframe for Fade In */
+
+@-webkit-keyframes scroll-left {
+    0% {
+        -webkit-transform: translateX(45%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+
+
+
