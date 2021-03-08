@@ -62,6 +62,15 @@ app.get('/channels/:channelName/', (request, response) => {
 
 app.post('/channels/:channelName/', (request, response) => {
 
+    if (request.body.text === "") {
+        response.redirect(`/channels/${standardChannelName}`);
+        return
+    };
+
+    if (request.body.autor === "") {
+        request.body.autor = "Anonymus";
+    }
+
     const {channelName} = request.params;
     standardChannelName = channelName;
     channelFileName = path.join(CHANNEL_DIR, `${channelName}.json`);
@@ -117,7 +126,14 @@ app.post('/channels/:channelName/', (request, response) => {
 })
 
 app.post('/newFile/', (request, response) => {
+
+    if (request.body.newname === "") {
+        response.redirect(`/channels/${standardChannelName}`);
+        return
+    }
+
     let channelname = request.body.newname;
+
     let filepath = path.join(CHANNEL_DIR, `${channelname}.json`);
     const url = `/channels/${channelname}`;
 
@@ -129,7 +145,7 @@ app.post('/newFile/', (request, response) => {
     readFile(channellistpath, FILE_OPTIONS,  (error, datas) => {
 
         if (error) {
-            response.status(500).end();
+            response.redirect(`/channels/${channelname}`);
             return
         }
 
@@ -165,40 +181,6 @@ app.post('/newFile/', (request, response) => {
     })
 })
 
-        /*writeFile(filepath, JSON.stringify(filecontent, null, 2) , FILE_OPTIONS, (error) => {
-            if (error) {
-                response.status(500).end();
-            } else {
-                response.redirect(`/channels/${channelName}`);
-            }
-        })
-
-        readFile(channelFileName, FILE_OPTIONS, (error, text) => {
-
-            if (error) {
-                response.status(500).end();
-                return
-            }
-
-            const messages = JSON.parse(text);
-
-            messages.messages.unshift(message);
-
-            let treffer = false;
-
-            while (treffer === false) {
-                messages.users.forEach(element => {
-                    if (element.autor === nickn.autor) {
-                        treffer = true;
-                    }
-                })
-
-                if (treffer === false) {
-                    messages.users.push(nickn);
-                    treffer = true;
-                }
-            }*/
-
 app.listen(port, () => {
 console.log(`Example app listening at http://localhost:${port}`);
 })
@@ -208,32 +190,3 @@ var completedate = new Date();
 completedate = completedate.toLocaleString('de-DE');
 return completedate;
 }
-
-//let channelName = "Test" + ".json"
-//let filepath = path.join(CHANNEL_DIR, channelName)
-//console.log(filepath);
-
-/*function createChannel() {
-console.log(test);
-/*let input = document.getElementById("newname")
-let channelName = input.value;
-console.log(channelName);
-/*let filepath = path.join(CHANNEL_DIR, channelName, '.json');
-
-readFile(templatefilepath, FILE_OPTIONS, (error, text) => {
-
-    if (error) {
-        response.status(500).end();
-        return
-    }
-
-    const filecontent = JSON.parse(text);
-
-    console.log(filecontent);
-
-})
-
-fs.writeFile(filepath, filecontent, (error) => {
-    if (error) throw error;
-})
-}*/

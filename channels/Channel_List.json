@@ -1,6 +1,7 @@
 {
   "channels": [
     {
+      "topic": "Alltag",
       "channelname": "World Domination",
       "url": "/channels/World_Domination"
     },
@@ -89,8 +90,8 @@
       "url": "/channels/Test 18"
     },
     {
-      "channelname": "",
-      "url": "/channels/"
+      "channelname": "New Channel",
+      "url": "/channels/New Channel"
     }
   ]
 }

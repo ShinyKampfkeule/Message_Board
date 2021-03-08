@@ -59,10 +59,20 @@
     <div class="links" id="links">
         {{#cchannellist}}
             {{#each channels}}
-                <a href="{{url}}" id="channel" class="link">{{channelname}}</a>
+                    <a href="{{url}}" id="channel" class="link">{{channelname}}</a>
             {{/each}}
         {{/cchannellist}}
     </div>
+    <!--<div class="links" id="links">
+        {{#cchannellist}}
+            {{#each Topics}}
+                <button class="accordion" onclick="accordion()">{{tname}}</button>
+                <div class="accordion-content">
+                    <a href="{{url}}" id="channel" class="link">{{channelname}}</a>
+                </div>
+            {{/each}}
+        {{/cchannellist}}
+    </div>-->
     <hr class="linebottom" id="lineb">
     <form id="newChannel" class="newChannel" method="post" action="/newFile">
         <textarea class = "newname" id="newname" name="newname" placeholder="New Channel Name" maxlength="30"></textarea>
