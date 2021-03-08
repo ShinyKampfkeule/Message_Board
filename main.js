@@ -1,5 +1,5 @@
 const express = require('express');
-const {readFile, writeFile, existsSync} = require ('fs');
+const {readFile, writeFile, existsSync, unlinkSync} = require ('fs');
 const path = require('path');
 const exphbs = require('express-handlebars');
 
@@ -15,14 +15,14 @@ app.set('view engine', 'handlebars');
 app.use('/static', express.static('./public'));
 app.use(express.urlencoded());
 
-let standardChannelName = 'World_Domination';
-let channelFileName = path.join(CHANNEL_DIR, `World_Domination.json`);
+let standardChannelName = 'General';
+let channelFileName = path.join(CHANNEL_DIR, `General.json`);
 let cchannellist = 0;
 let templatefilepath = path.join(CHANNEL_DIR, `channel_template.json`);
 let channellistpath = path.join(CHANNEL_DIR, `Channel_List.json`);
 
 app.get('/', (request, response) => {
-    response.redirect('/channels/World_Domination');
+    response.redirect('/channels/General');
 })
 
 
@@ -149,6 +149,11 @@ app.post('/newFile/', (request, response) => {
             return
         }
 
+        if (datas.includes(url)) {
+            response.redirect(`/channels/${standardChannelName}`);
+            return
+        }
+
         const content = JSON.parse(datas);
 
         content.channels.push(channeli);
@@ -180,6 +185,137 @@ app.post('/newFile/', (request, response) => {
         })
     })
 })
+
+app.get('/deleteChannel/:channelname', (request, response) => {
+
+    const {channelname} = request.params;
+    const deleterpath = path.join(CHANNEL_DIR, `zwischenspeicher.json`);
+    let filepath = path.join(CHANNEL_DIR, `${channelname}.json`);
+    let url = (`/channels/${channelname}`)
+    /*let channelinfo = ('    { \n      "channelname": "' + channelName + '",\n      "url": "' + fileurl + '" \n    }');*/
+    const content = {
+        channelname,
+        url
+    }
+
+
+    /*console.log(channelinfo);
+    console.log(typeof channelinfo)
+    console.log('##########################')*/
+
+    /*unlinkSync(filepath, (error) => {
+        if (error) {
+            response.status(500).end();
+        }
+    })*/
+
+    writeFile(deleterpath, JSON.stringify(content, null, 2), FILE_OPTIONS, (error) => {
+        if (error) {
+            response.status(500).end();
+        }
+
+        readFile(deleterpath, FILE_OPTIONS, (error, dataz) => {
+
+            console.log(deleterpath);
+
+            if (error) {
+                console.log("Hello");
+                response.status(500).end();
+                return
+            }
+
+            let deletecontent = dataz;
+
+
+            readFile(channellistpath, FILE_OPTIONS, (error, data) => {
+                if (error) {
+                    response.status(500).end();
+                    return
+                }
+
+                let filecontent = JSON.parse(data);
+
+                console.log(typeof data);
+                console.log(data);
+                console.log('####################################')
+                console.log('####################################')
+                console.log(typeof deletecontent);
+                console.log(deletecontent);
+                console.log('####################################')
+                console.log('####################################')
+                if (data.includes(deletecontent)) {
+                    console.log("True");
+                } else {
+                    console.log("False");
+                }
+
+            })
+
+        })
+    })
+
+})
+
+
+
+        /*else {
+            response.redirect(`/channels/General`)
+        }*/
+
+
+    /*let channelname = request.body.newname;
+
+    let filepath = path.join(CHANNEL_DIR, `${channelname}.json`);
+    const url = `/channels/${channelname}`;
+
+    const channeli = {
+        channelname,
+        url
+    }
+
+    readFile(channellistpath, FILE_OPTIONS,  (error, datas) => {
+
+        if (error) {
+            response.redirect(`/channels/${channelname}`);
+            return
+        }
+
+        if (datas.includes(url)) {
+            response.redirect(`/channels/${standardChannelName}`);
+            return
+        }
+
+        const content = JSON.parse(datas);
+
+        content.channels.push(channeli);
+
+        writeFile(channellistpath, JSON.stringify(content, null, 2) , FILE_OPTIONS, (error) => {
+            if (error) {
+                response.status(500).end();
+            }
+        })
+
+        readFile(templatefilepath, FILE_OPTIONS, (error, data) => {
+
+            if (error) {
+                response.status(500).end();
+                return
+            }
+
+            let filecontent = JSON.parse(data);
+            filecontent.name = channelname;
+            filecontent.fname = channelname;
+
+            writeFile(filepath, JSON.stringify(filecontent, null, 2) , FILE_OPTIONS, (error) => {
+                if (error) {
+                    response.status(500).end();
+                } else {
+                    response.redirect(`/channels/${channelname}`);
+                }
+            })
+        })
+    })*/
+
 
 app.listen(port, () => {
 console.log(`Example app listening at http://localhost:${port}`);

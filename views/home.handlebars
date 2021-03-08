@@ -46,6 +46,9 @@
 </video>
 <header class="fadeIn">
     <h3 class="title" id="header">{{#channel}}{{name}}{{/channel}}</h3>
+    <form action="/deleteChannel/{{#channel}}{{fname}}{{/channel}}">
+        <button type="submit">Delete</button>
+    </form>
 </header>
 <div id="openls" class="openls">
     <button id="openL" class="openbtn" onclick="openNavLeft()">&#45;</button>

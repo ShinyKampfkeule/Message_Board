@@ -1,97 +1,80 @@
 {
   "channels": [
     {
-      "topic": "Alltag",
-      "channelname": "World Domination",
-      "url": "/channels/World_Domination"
-    },
-    {
-      "channelname": "Save the World",
-      "url": "/channels/Save_the_World"
-    },
-    {
-      "channelname": "Channel",
-      "url": "/channels/Channel_Channel"
+      "channelname": "General",
+      "url": "/channels/General"
     },
     {
       "channelname": "Pokemon",
       "url": "/channels/Pokemon"
     },
     {
+      "channelname": "Cyberpunk 2077",
+      "url": "/channels/Cyberpunk 2077"
+    },
+    {
+      "channelname": "Digimon",
+      "url": "/channels/Digimon"
+    },
+    {
+      "channelname": "Studying",
+      "url": "/channels/Studying"
+    },
+    {
+      "channelname": "Speedruns",
+      "url": "/channels/Speedruns"
+    },
+    {
+      "channelname": "Minecraft",
+      "url": "/channels/Minecraft"
+    },
+    {
+      "channelname": "Food&Drinks",
+      "url": "/channels/Food&Drinks"
+    },
+    {
+      "channelname": "Lifestyle",
+      "url": "/channels/Lifestyle"
+    },
+    {
+      "channelname": "Modding",
+      "url": "/channels/Modding"
+    },
+    {
+      "channelname": "Offtopic",
+      "url": "/channels/Offtopic"
+    },
+    {
+      "channelname": "Web-Development",
+      "url": "/channels/Web-Development"
+    },
+    {
+      "channelname": "Mobilegames",
+      "url": "/channels/Mobilegames"
+    },
+    {
+      "channelname": "Geocaching",
+      "url": "/channels/Geocaching"
+    },
+    {
+      "channelname": "TCG",
+      "url": "/channels/TCG"
+    },
+    {
+      "channelname": "Nintendo",
+      "url": "/channels/Nintendo"
+    },
+    {
+      "channelname": "Politik",
+      "url": "/channels/Politik"
+    },
+    {
+      "channelname": "Sports",
+      "url": "/channels/Sports"
+    },
+    {
       "channelname": "Test",
       "url": "/channels/Test"
-    },
-    {
-      "channelname": "Test2",
-      "url": "/channels/Test2"
-    },
-    {
-      "channelname": "Test3",
-      "url": "/channels/Test3"
-    },
-    {
-      "channelname": "Test4",
-      "url": "/channels/Test4"
-    },
-    {
-      "channelname": "Test5",
-      "url": "/channels/Test5"
-    },
-    {
-      "channelname": "Test6",
-      "url": "/channels/Test6"
-    },
-    {
-      "channelname": "Test7",
-      "url": "/channels/Test7"
-    },
-    {
-      "channelname": "Test8",
-      "url": "/channels/Test8"
-    },
-    {
-      "channelname": "Test9",
-      "url": "/channels/Test9"
-    },
-    {
-      "channelname": "Test10",
-      "url": "/channels/Test10"
-    },
-    {
-      "channelname": "Test11",
-      "url": "/channels/Test11"
-    },
-    {
-      "channelname": "Test12",
-      "url": "/channels/Test12"
-    },
-    {
-      "channelname": "Test13",
-      "url": "/channels/Test13"
-    },
-    {
-      "channelname": "Test14",
-      "url": "/channels/Test14"
-    },
-    {
-      "channelname": "Test 16",
-      "url": "/channels/Test 16"
-    },
-    {
-      "channelname": "Test15",
-      "url": "/channels/Test15"
-    },
-    {
-      "channelname": "Test 17",
-      "url": "/channels/Test 17"
-    },
-    {
-      "channelname": "Test 18",
-      "url": "/channels/Test 18"
-    },
-    {
-      "channelname": "New Channel",
-      "url": "/channels/New Channel"
     }
   ]
 }
