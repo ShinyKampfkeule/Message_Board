@@ -2,7 +2,41 @@
   "name": "General",
   "fname": "General",
   "messages": [
+    {
+      "autor": "Admin",
+      "text": "Nein, entweder erstellst du einen oder du suchst einen passenden Channel für deine Waren !",
+      "timestamp": "9.3.2021, 16:17:53"
+    },
+    {
+      "autor": "TOTALLY_NOT_A_WAIFU_PILLOW_SELLER",
+      "text": "Hey gibt es einen Kanal für An-/Verkauf verschiedenster Sachen ?",
+      "timestamp": "9.3.2021, 16:17:29"
+    },
+    {
+      "autor": "Admin",
+      "text": "Der muss beim letzten Update verloren gegangen sein. Du kannst aber gerne mit dem Button unter den Kanälen einen neuen Channel erstellen !",
+      "timestamp": "9.3.2021, 16:16:25"
+    },
+    {
+      "autor": "NOT_Joker",
+      "text": "Hey, wo ist denn der alte World_Domination-Channel abgeblieben ?",
+      "timestamp": "9.3.2021, 16:15:47"
+    },
+    {
+      "autor": "Admin",
+      "text": "Dieser Chat ist für generelle Anfragen und Themen rund um das Board gedacht !\r\nViel Spaß in unseren Kanälen !",
+      "timestamp": "9.3.2021, 16:15:12"
+    }
   ],
   "users": [
+    {
+      "autor": "Admin"
+    },
+    {
+      "autor": "NOT_Joker"
+    },
+    {
+      "autor": "TOTALLY_NOT_A_WAIFU_PILLOW_SELLER"
+    }
   ]
 }

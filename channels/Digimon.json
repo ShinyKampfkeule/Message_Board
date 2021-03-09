@@ -1,6 +1,40 @@
 {
   "name": "Digimon",
   "fname": "Digimon",
-  "messages": [],
-  "users": []
+  "messages": [
+    {
+      "autor": "Kabuterimon",
+      "text": "Hey Jungs, ich bin digitiert !",
+      "timestamp": "9.3.2021, 16:37:01"
+    },
+    {
+      "autor": "Admin",
+      "text": "Dieser Channel ist Digimon-Infiziert !",
+      "timestamp": "9.3.2021, 16:36:44"
+    },
+    {
+      "autor": "Gabumon",
+      "text": "Gabumon ist besser !",
+      "timestamp": "9.3.2021, 16:36:27"
+    },
+    {
+      "autor": "Agumon",
+      "text": "Agumon isch beschde !",
+      "timestamp": "9.3.2021, 16:36:14"
+    }
+  ],
+  "users": [
+    {
+      "autor": "Agumon"
+    },
+    {
+      "autor": "Gabumon"
+    },
+    {
+      "autor": "Admin"
+    },
+    {
+      "autor": "Kabuterimon"
+    }
+  ]
 }

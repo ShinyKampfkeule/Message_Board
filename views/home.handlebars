@@ -66,16 +66,6 @@
             {{/each}}
         {{/cchannellist}}
     </div>
-    <!--<div class="links" id="links">
-        {{#cchannellist}}
-            {{#each Topics}}
-                <button class="accordion" onclick="accordion()">{{tname}}</button>
-                <div class="accordion-content">
-                    <a href="{{url}}" id="channel" class="link">{{channelname}}</a>
-                </div>
-            {{/each}}
-        {{/cchannellist}}
-    </div>-->
     <hr class="linebottom" id="lineb">
     <form id="newChannel" class="newChannel" method="post" action="/newFile">
         <textarea class = "newname" id="newname" name="newname" placeholder="New Channel Name" maxlength="30"></textarea>
@@ -123,7 +113,7 @@
         <a href="javascript:void(0)" id="closeM" class="closebtnMessage" onclick="closeMessage()">&times;</a>
         <button class="sendmessage" type="submit">Send</button>
         <p></p>
-        <textarea class="newmessage" name="text" id="message" maxlength="480" placeholder="Message..."></textarea>
+        <textarea class="newmessage" name="text" id="message" placeholder="Message..."></textarea>
     </form>
 </div>
 <div class="footer2" id="news">

@@ -1,6 +1,24 @@
 {
   "name": "Speedruns",
   "fname": "Speedruns",
-  "messages": [],
-  "users": []
+  "messages": [
+    {
+      "autor": "TheLegendOfLink",
+      "text": "Ich habe gerade einen TLoZ-OoT Speedrun in Sub-1:36 beendet ! WR ich komme !",
+      "timestamp": "9.3.2021, 16:21:39"
+    },
+    {
+      "autor": "Pokemon_Speedrunner",
+      "text": "Hey, schaut euch mal meinen WR in Pokemon Gelb an !\r\n\r\nhttps://www.youtube.com/watch?v=TMa7Ony_4Rw",
+      "timestamp": "9.3.2021, 16:20:38"
+    }
+  ],
+  "users": [
+    {
+      "autor": "Pokemon_Speedrunner"
+    },
+    {
+      "autor": "TheLegendOfLink"
+    }
+  ]
 }

@@ -1,6 +1,29 @@
 {
   "name": "Modding",
   "fname": "Modding",
-  "messages": [],
-  "users": []
+  "messages": [
+    {
+      "autor": "Still a Skyrim Player",
+      "text": "Hey, nicht so vulgär ! Skyrim ist das beste Spiel, das man auf meinem Pager spielen kann !",
+      "timestamp": "9.3.2021, 16:32:30"
+    },
+    {
+      "autor": "Still a Skyrim Hater",
+      "text": "Skyrim ist beschissen !",
+      "timestamp": "9.3.2021, 16:31:25"
+    },
+    {
+      "autor": "Still a Skyrim Player",
+      "text": "Hey, habe heute mein 4k-UHD-Ray-Tracing-Skyrim-UltraRealism-Modpack fertig gestellt. Das Pack ist nur 4,3 Terrabyte groß. Ich liebe dieses Spiel ! Das wird mein 5001 Run durch das Spiel.",
+      "timestamp": "9.3.2021, 16:30:23"
+    }
+  ],
+  "users": [
+    {
+      "autor": "Still a Skyrim Player"
+    },
+    {
+      "autor": "Still a Skyrim Hater"
+    }
+  ]
 }

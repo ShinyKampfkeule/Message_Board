@@ -1,6 +1,32 @@
 {
   "name": "Pokemon",
   "fname": "Pokemon",
-  "messages": [],
-  "users": []
+  "messages": [
+    {
+      "autor": "Xxx_Pokemon-Fan-360-No_Scope_xxX",
+      "text": "Ja man, voll geil, jetzt kann ich die Pokemon auch im 360-No_Scope-Style fangen ! Total Cool ey !",
+      "timestamp": "9.3.2021, 16:19:39"
+    },
+    {
+      "autor": "TOTALLY_NOT_KEVIN_XD",
+      "text": "Na klar ! ",
+      "timestamp": "9.3.2021, 16:18:46"
+    },
+    {
+      "autor": "Pokemon-Fan",
+      "text": "Heyyyyyyyyy, habt ihr die Ankündigungen für die neuen Spiele gesehen ?",
+      "timestamp": "9.3.2021, 16:18:21"
+    }
+  ],
+  "users": [
+    {
+      "autor": "Pokemon-Fan"
+    },
+    {
+      "autor": "TOTALLY_NOT_KEVIN_XD"
+    },
+    {
+      "autor": "Xxx_Pokemon-Fan-360-No_Scope_xxX"
+    }
+  ]
 }

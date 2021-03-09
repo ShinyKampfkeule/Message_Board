@@ -1,6 +1,24 @@
 {
   "name": "Cyberpunk 2077",
   "fname": "Cyberpunk 2077",
-  "messages": [],
-  "users": []
+  "messages": [
+    {
+      "autor": "Cyberpunk-PC-Spieler",
+      "text": "Ich liebe Cyberpunk !",
+      "timestamp": "9.3.2021, 16:35:50"
+    },
+    {
+      "autor": "Cyberpunk-Hater",
+      "text": "Cyberpunk ist scheiße !",
+      "timestamp": "9.3.2021, 16:35:33"
+    }
+  ],
+  "users": [
+    {
+      "autor": "Cyberpunk-Hater"
+    },
+    {
+      "autor": "Cyberpunk-PC-Spieler"
+    }
+  ]
 }

@@ -1,6 +1,32 @@
 {
   "name": "Web-Development",
   "fname": "Web-Development",
-  "messages": [],
-  "users": []
+  "messages": [
+    {
+      "autor": "Random Dude !!!",
+      "text": "Error 606 LOL !!!",
+      "timestamp": "9.3.2021, 16:33:38"
+    },
+    {
+      "autor": "Admin",
+      "text": "Error 505",
+      "timestamp": "9.3.2021, 16:33:23"
+    },
+    {
+      "autor": "Kevin",
+      "text": "Error 404",
+      "timestamp": "9.3.2021, 16:33:14"
+    }
+  ],
+  "users": [
+    {
+      "autor": "Kevin"
+    },
+    {
+      "autor": "Admin"
+    },
+    {
+      "autor": "Random Dude !!!"
+    }
+  ]
 }

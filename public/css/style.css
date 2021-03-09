@@ -352,6 +352,7 @@ header {
     color: #ffffff;
     display: block;
     text-align: center;
+    word-break: break-all;
 }
 
 /* General for Message-Content */

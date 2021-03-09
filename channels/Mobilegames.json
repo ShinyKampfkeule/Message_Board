@@ -1,6 +1,16 @@
 {
   "name": "Mobilegames",
   "fname": "Mobilegames",
-  "messages": [],
-  "users": []
+  "messages": [
+    {
+      "autor": "Pay-to-Win",
+      "text": "Ich habe gerade 2500€ für Lootboxen ausgegeben !",
+      "timestamp": "9.3.2021, 16:39:13"
+    }
+  ],
+  "users": [
+    {
+      "autor": "Pay-to-Win"
+    }
+  ]
 }

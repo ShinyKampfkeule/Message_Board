@@ -1,6 +1,16 @@
 {
   "name": "Lifestyle",
   "fname": "Lifestyle",
-  "messages": [],
-  "users": []
+  "messages": [
+    {
+      "autor": "Kevin",
+      "text": "Warum existiert dieser Channel eigentlich ?",
+      "timestamp": "9.3.2021, 16:37:36"
+    }
+  ],
+  "users": [
+    {
+      "autor": "Kevin"
+    }
+  ]
 }

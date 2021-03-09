@@ -1,6 +1,16 @@
 {
   "name": "Minecraft",
   "fname": "Minecraft",
-  "messages": [],
-  "users": []
+  "messages": [
+    {
+      "autor": "MinecraftjungeLP",
+      "text": "Hey, scheckt mein neuen Minecraft-Only Youtube Kanal aus ! Ich filme nur den besten Minecraft-Shit (Bedwars, Survival-Games, Heide&Seek, Server-Pranks, Game-Master, Server-Ratings) ! Abonirt Mich !",
+      "timestamp": "9.3.2021, 16:28:03"
+    }
+  ],
+  "users": [
+    {
+      "autor": "MinecraftjungeLP"
+    }
+  ]
 }
