@@ -71,6 +71,10 @@
     {
       "channelname": "TCG",
       "url": "/channels/TCG"
+    },
+    {
+      "channelname": "Testchannel",
+      "url": "/channels/Testchannel"
     }
   ]
 }

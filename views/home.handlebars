@@ -46,9 +46,6 @@
 </video>
 <header class="fadeIn">
     <h3 class="title" id="header">{{#channel}}{{name}}{{/channel}}</h3>
-    <form action="/deleteChannel/{{#channel}}{{fname}}{{/channel}}">
-        <button type="submit">Delete</button>
-    </form>
 </header>
 <div id="openls" class="openls">
     <button id="openL" class="openbtn" onclick="openNavLeft()">&#45;</button>
@@ -80,6 +77,9 @@
     <form id="newChannel" class="newChannel" method="post" action="/newFile">
         <textarea class = "newname" id="newname" name="newname" placeholder="New Channel Name" maxlength="30"></textarea>
         <button class="create" type="submit">Create</button>
+    </form>
+    <form class="deleteChannel" action="/deleteChannel/{{#channel}}{{fname}}{{/channel}}">
+        <button type="submit" class="delete">Delete</button>
     </form>
 </div>
 <div id="openrs" class="openrs">

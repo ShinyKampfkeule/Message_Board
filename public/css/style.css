@@ -224,7 +224,21 @@ header {
     outline: none;
     color: #ffffff;
     top: 96%;
-    left: 25%;
+    left: 0;
+}
+
+/* Submit Button for creating new Channel */
+
+.delete {
+    width: 50%;
+    height: 3%;
+    position: absolute;
+    border-radius: 25px;
+    background-color: #2d2d2d;
+    outline: none;
+    color: #ffffff;
+    top: 96%;
+    right: 0;
 }
 
 /* General for "Open right Sidebar"-Button */
