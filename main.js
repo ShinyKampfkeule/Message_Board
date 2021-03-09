@@ -192,22 +192,16 @@ app.get('/deleteChannel/:channelname', (request, response) => {
     const deleterpath = path.join(CHANNEL_DIR, `zwischenspeicher.json`);
     let filepath = path.join(CHANNEL_DIR, `${channelname}.json`);
     let url = (`/channels/${channelname}`)
-    /*let channelinfo = ('    { \n      "channelname": "' + channelName + '",\n      "url": "' + fileurl + '" \n    }');*/
     const content = {
         channelname,
         url
     }
 
-
-    /*console.log(channelinfo);
-    console.log(typeof channelinfo)
-    console.log('##########################')*/
-
-    /*unlinkSync(filepath, (error) => {
+    unlinkSync(filepath, (error) => {
         if (error) {
             response.status(500).end();
         }
-    })*/
+    })
 
     writeFile(deleterpath, JSON.stringify(content, null, 2), FILE_OPTIONS, (error) => {
         if (error) {
@@ -216,16 +210,10 @@ app.get('/deleteChannel/:channelname', (request, response) => {
 
         readFile(deleterpath, FILE_OPTIONS, (error, dataz) => {
 
-            console.log(deleterpath);
-
             if (error) {
-                console.log("Hello");
                 response.status(500).end();
                 return
             }
-
-            let deletecontent = dataz;
-
 
             readFile(channellistpath, FILE_OPTIONS, (error, data) => {
                 if (error) {
@@ -234,26 +222,40 @@ app.get('/deleteChannel/:channelname', (request, response) => {
                 }
 
                 let filecontent = JSON.parse(data);
+                let array = Object.values(filecontent.channels);
+                let search = true;
+                let id = 0;
 
-                console.log(typeof data);
-                console.log(data);
-                console.log('####################################')
-                console.log('####################################')
-                console.log(typeof deletecontent);
-                console.log(deletecontent);
-                console.log('####################################')
-                console.log('####################################')
-                if (data.includes(deletecontent)) {
-                    console.log("True");
-                } else {
-                    console.log("False");
+                while (search === true) {
+                    if (filecontent.channels[id].channelname === channelname) {
+                        search = false;
+                    } else {
+                        id += 1;
+                    }
                 }
 
-            })
+                array.splice(id, 1);
+                let newfilecontent = {
+                    channels:
+                        array
+                }
 
+                unlinkSync(deleterpath, (error) => {
+                    if (error) {
+                        response.status(500).end();
+                    }
+                })
+
+                writeFile(channellistpath, JSON.stringify(newfilecontent, null, 2), (error) => {
+                    if (error) {
+                        response.status(500).end();
+                    } else {
+                        response.redirect('/channels/General');
+                    }
+                })
+            })
         })
     })
-
 })
 
 

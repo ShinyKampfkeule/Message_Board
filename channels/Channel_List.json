@@ -9,24 +9,36 @@
       "url": "/channels/Pokemon"
     },
     {
-      "channelname": "Cyberpunk 2077",
-      "url": "/channels/Cyberpunk 2077"
-    },
-    {
-      "channelname": "Digimon",
-      "url": "/channels/Digimon"
-    },
-    {
-      "channelname": "Studying",
-      "url": "/channels/Studying"
-    },
-    {
       "channelname": "Speedruns",
       "url": "/channels/Speedruns"
     },
     {
       "channelname": "Minecraft",
       "url": "/channels/Minecraft"
+    },
+    {
+      "channelname": "Modding",
+      "url": "/channels/Modding"
+    },
+    {
+      "channelname": "Web-Development",
+      "url": "/channels/Web-Development"
+    },
+    {
+      "channelname": "Geocaching",
+      "url": "/channels/Geocaching"
+    },
+    {
+      "channelname": "Nintendo",
+      "url": "/channels/Nintendo"
+    },
+    {
+      "channelname": "Cyberpunk 2077",
+      "url": "/channels/Cyberpunk 2077"
+    },
+    {
+      "channelname": "Digimon",
+      "url": "/channels/Digimon"
     },
     {
       "channelname": "Food&Drinks",
@@ -37,44 +49,28 @@
       "url": "/channels/Lifestyle"
     },
     {
-      "channelname": "Modding",
-      "url": "/channels/Modding"
+      "channelname": "Mobilegames",
+      "url": "/channels/Mobilegames"
     },
     {
       "channelname": "Offtopic",
       "url": "/channels/Offtopic"
     },
     {
-      "channelname": "Web-Development",
-      "url": "/channels/Web-Development"
-    },
-    {
-      "channelname": "Mobilegames",
-      "url": "/channels/Mobilegames"
-    },
-    {
-      "channelname": "Geocaching",
-      "url": "/channels/Geocaching"
-    },
-    {
-      "channelname": "TCG",
-      "url": "/channels/TCG"
-    },
-    {
-      "channelname": "Nintendo",
-      "url": "/channels/Nintendo"
-    },
-    {
       "channelname": "Politik",
       "url": "/channels/Politik"
     },
     {
-      "channelname": "Sports",
-      "url": "/channels/Sports"
+      "channelname": "Sport",
+      "url": "/channels/Sport"
     },
     {
-      "channelname": "Test",
-      "url": "/channels/Test"
+      "channelname": "Studying",
+      "url": "/channels/Studying"
+    },
+    {
+      "channelname": "TCG",
+      "url": "/channels/TCG"
     }
   ]
 }
