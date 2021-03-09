@@ -103,7 +103,7 @@
     {{#channel}}
         {{#each messages}}
             <div class="post">
-                <form class="deleteMessage" action="/deleteMessage/{{#channel}}{{fname}}{{/channel}}">
+                <form class="deleteMessage" action="/deleteMessage/{{timestamp}}">
                     <button type="submit" class="delmessage">Delete Message</button>
                 </form>
                 <img class="icon" src="/static/images/icon.png" alt="Icon">

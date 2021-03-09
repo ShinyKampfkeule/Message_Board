@@ -28,7 +28,7 @@ function closeNavRight() {
 
 function openMessage() {
     document.getElementById("MessageAll").style.display = "initial";
-    document.getElementById("content").style.height = "62%";
+    document.getElementById("content").style.height = "61%";
     document.getElementById("news").style.display = "none";
 }
 

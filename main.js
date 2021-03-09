@@ -258,6 +258,75 @@ app.get('/deleteChannel/:channelname', (request, response) => {
     })
 })
 
+app.get('/deleteMessage/:channelname', (request, response) => {
+
+    const {channelname} = request.params;
+    const channelpath = path.join(CHANNEL_DIR, `${standardChannelName}.json`)
+
+    readFile(channelpath, FILE_OPTIONS, (error, data) => {
+        if (error) {
+            response.status(500).end();
+            return
+        }
+
+        let filecontent = JSON.parse(data);
+        let messages = Object.values(filecontent.messages);
+        let name = filecontent.name;
+        let user = filecontent.users;
+
+        let search = true;
+        let id = 0;
+        let idu = 0;
+
+        while (search === true) {
+            if (filecontent.messages[id].timestamp === channelname) {
+                search = false;
+            } else {
+                id += 1;
+            }
+        }
+
+        let deleteuser = filecontent.messages[id].autor
+        let counter = 0;
+
+        for (var i = 0; i < user.length; i++) {
+            if (filecontent.users[i].autor === deleteuser) {
+                idu = i
+            };
+        };
+
+
+        messages.forEach(function (element) {
+            if (element.autor === deleteuser) {
+                counter += 1;
+            };
+        });
+
+        if (counter === 1) {
+            user.splice(idu, 1);
+        }
+
+        messages.splice(id, 1);
+        let newfilecontent = {
+            name: name,
+            fname: name,
+            messages:
+            messages,
+            users: user
+        }
+
+        writeFile(channelpath, JSON.stringify(newfilecontent, null, 2), (error) => {
+            if (error) {
+                response.status(500).end();
+            } else {
+                response.redirect(`/channels/${standardChannelName}`);
+            }
+        })
+
+    });
+
+})
+
 app.listen(port, () => {
 console.log(`Example app listening at http://localhost:${port}`);
 })
