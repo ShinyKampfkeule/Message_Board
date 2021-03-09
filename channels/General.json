@@ -2,7 +2,57 @@
   "name": "General",
   "fname": "General",
   "messages": [
+    {
+      "autor": "Powerhouse",
+      "text": "Hier ist mein Power from the House !",
+      "timestamp": "9.3.2021, 14:16:11"
+    },
+    {
+      "autor": "Werbe-Bot",
+      "text": "Haben Sie schon von dem neuen Spiel \"Lunistice\" gehört, dass sie aktuell auf Steam wishlisten können ? Tun sie es jetzt !",
+      "timestamp": "9.3.2021, 13:51:59"
+    },
+    {
+      "autor": "Werbe-Bot",
+      "text": "Hier könnte ihre Werbung stehen !",
+      "timestamp": "9.3.2021, 13:43:59"
+    },
+    {
+      "autor": "Insta-Poser_3000_XXX",
+      "text": "Check out my new Insta-Post !",
+      "timestamp": "9.3.2021, 13:43:42"
+    },
+    {
+      "autor": "The_General",
+      "text": "Ich bringe dir die Erleuchtung !",
+      "timestamp": "9.3.2021, 13:43:15"
+    },
+    {
+      "autor": "Junger Padawan",
+      "text": "Erzähl mir mehr mein Meister !",
+      "timestamp": "9.3.2021, 13:42:50"
+    },
+    {
+      "autor": "The_General",
+      "text": "Hey, hier spricht der General ! Alle Mann einsteigen, bitte !",
+      "timestamp": "9.3.2021, 13:33:55"
+    }
   ],
   "users": [
+    {
+      "autor": "The_General"
+    },
+    {
+      "autor": "Junger Padawan"
+    },
+    {
+      "autor": "Insta-Poser_3000_XXX"
+    },
+    {
+      "autor": "Werbe-Bot"
+    },
+    {
+      "autor": "Powerhouse"
+    }
   ]
 }

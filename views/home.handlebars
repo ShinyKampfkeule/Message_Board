@@ -46,6 +46,9 @@
 </video>
 <header class="fadeIn">
     <h3 class="title" id="header">{{#channel}}{{name}}{{/channel}}</h3>
+    <form class="deleteChannel" action="/deleteChannel/{{#channel}}{{fname}}{{/channel}}">
+        <button type="submit" class="delete">Delete Channel</button>
+    </form>
 </header>
 <div id="openls" class="openls">
     <button id="openL" class="openbtn" onclick="openNavLeft()">&#45;</button>
@@ -59,7 +62,7 @@
     <div class="links" id="links">
         {{#cchannellist}}
             {{#each channels}}
-                    <a href="{{url}}" id="channel" class="link">{{channelname}}</a>
+                <a href="{{url}}" id="channel" class="link">{{channelname}}</a>
             {{/each}}
         {{/cchannellist}}
     </div>
@@ -77,9 +80,6 @@
     <form id="newChannel" class="newChannel" method="post" action="/newFile">
         <textarea class = "newname" id="newname" name="newname" placeholder="New Channel Name" maxlength="30"></textarea>
         <button class="create" type="submit">Create</button>
-    </form>
-    <form class="deleteChannel" action="/deleteChannel/{{#channel}}{{fname}}{{/channel}}">
-        <button type="submit" class="delete">Delete</button>
     </form>
 </div>
 <div id="openrs" class="openrs">
@@ -103,6 +103,9 @@
     {{#channel}}
         {{#each messages}}
             <div class="post">
+                <form class="deleteMessage" action="/deleteMessage/{{#channel}}{{fname}}{{/channel}}">
+                    <button type="submit" class="delmessage">Delete Message</button>
+                </form>
                 <img class="icon" src="/static/images/icon.png" alt="Icon">
                 <p class="autor">{{autor}}</p>
                 <p class="timestamp">{{timestamp}}</p>
@@ -120,7 +123,7 @@
         <a href="javascript:void(0)" id="closeM" class="closebtnMessage" onclick="closeMessage()">&times;</a>
         <button class="sendmessage" type="submit">Send</button>
         <p></p>
-        <textarea class="newmessage" name="text" id="message" placeholder="Message..."></textarea>
+        <textarea class="newmessage" name="text" id="message" maxlength="480" placeholder="Message..."></textarea>
     </form>
 </div>
 <div class="footer2" id="news">

@@ -26,10 +26,9 @@ header {
     height: 8%;
     line-height: 20%;
     position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    width: 99.4%;
+    top: 1%;
+    left: 13%;
+    width: 73.7%;
     z-index: 9001;
     border: 8px;
     border-color: #2d2d2d;
@@ -40,9 +39,23 @@ header {
 /* current Channel-Name */
 
 .title {
-    margin-left: 13%;
     position: absolute;
     color: #ffffff;
+    left: 1%;
+}
+
+/* Submit Button for creating new Channel */
+
+.delete {
+    width: 6%;
+    height: 30%;
+    position: absolute;
+    border-radius: 25px;
+    background-color: #2d2d2d;
+    outline: none;
+    color: #ffffff;
+    top: 10%;
+    right: 0.5%;
 }
 
 /* General for "Open left Sidebar"-Button */
@@ -81,11 +94,11 @@ header {
 
 .sidebar {
     background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
-    height: 82%;
+    height: 91%;
     width: 10%;
     position: fixed;
     z-index: 9000;
-    top: 10.2%;
+    top: 1%;
     left: 0.5%;
     border: 8px;
     border-color: #2d2d2d;
@@ -129,27 +142,29 @@ header {
     color: #ffffff;
     display: block;
     text-align: center;
-    position: fixed;
-    left: 1.5%;
+    position: absolute;
+    left: 7%;
+    top: 7%;
 }
 
 /* Line above Channels */
 
 .linetop {
-    position: fixed;
+    position: absolute;
     left: 1%;
-    width: 9.5%;
-    top: 22%;
+    width: 98%;
+    top: 14%;
+    z-index: 9001;
 }
 
 /* Channel-Links inside left Sidebar */
 
 .links {
-    height: 75.5%;
+    height: 76%;
     width: 95%;
     overflow-y: scroll;
     position: absolute;
-    top: 14.6%;
+    top: 15%;
     left: 2.5%;
     text-align: center;
 }
@@ -227,20 +242,6 @@ header {
     left: 0;
 }
 
-/* Submit Button for creating new Channel */
-
-.delete {
-    width: 50%;
-    height: 3%;
-    position: absolute;
-    border-radius: 25px;
-    background-color: #2d2d2d;
-    outline: none;
-    color: #ffffff;
-    top: 96%;
-    right: 0;
-}
-
 /* General for "Open right Sidebar"-Button */
 
 .openrs {
@@ -277,11 +278,11 @@ header {
 
 .sidebarright {
     background-image: url("/static/images/comb.svg"), linear-gradient(to bottom right, #1c1c1c, #2d2d2d);
-    height: 82%;
+    height: 91%;
     width: 10%;
     position: fixed;
     z-index: 9000;
-    top: 10.2%;
+    top: 1%;
     right: 0.5%;
     overflow: hidden;
     border: 8px;
@@ -307,20 +308,23 @@ header {
 /* Header in right Sidebar */
 
 .rsheader {
-    padding: 6px 8px 6px 16px;
     font-size: 40px;
     color: #ffffff;
     display: block;
     text-align: center;
+    position: absolute;
+    top: 7%;
+    left: 33%;
 }
 
 /* Line over User-List */
 
 .rsline {
-    position: fixed;
+    position: absolute;
     right: 1%;
-    width: 9.5%;
-    top: 22%;
+    width: 98%;
+    top: 14%;
+    z-index: 9000;
 }
 
 /* User-List inside right Sidebar */
@@ -353,8 +357,8 @@ header {
 /* General for Message-Content */
 
 .content {
-    height: 82.5%;
-    top: 10.2%;
+    height: 82%;
+    top: 11%;
     width: 76%;
     margin-left: 11.8%;
     position: absolute;
@@ -416,6 +420,19 @@ header {
     font-size: 25px;
     word-wrap: break-word;
     line-height: 40px;
+}
+
+/* Submit Button for deleting Message */
+
+.delmessage {
+    width: 6%;
+    height: 3%;
+    border-radius: 25px;
+    background-color: #2d2d2d;
+    outline: none;
+    color: #ffffff;
+    margin-left: 93.5%;
+    margin-top: 0.5%;
 }
 
 /* Button for opening "New Message"-Area */
@@ -519,7 +536,7 @@ header {
 .newmessage {
     text-align: left;
     width: 88%;
-    height: 75%;
+    height: 60%;
     resize: initial;
     border-radius: 25px;
     outline: transparent;
