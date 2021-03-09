@@ -258,67 +258,6 @@ app.get('/deleteChannel/:channelname', (request, response) => {
     })
 })
 
-
-
-        /*else {
-            response.redirect(`/channels/General`)
-        }*/
-
-
-    /*let channelname = request.body.newname;
-
-    let filepath = path.join(CHANNEL_DIR, `${channelname}.json`);
-    const url = `/channels/${channelname}`;
-
-    const channeli = {
-        channelname,
-        url
-    }
-
-    readFile(channellistpath, FILE_OPTIONS,  (error, datas) => {
-
-        if (error) {
-            response.redirect(`/channels/${channelname}`);
-            return
-        }
-
-        if (datas.includes(url)) {
-            response.redirect(`/channels/${standardChannelName}`);
-            return
-        }
-
-        const content = JSON.parse(datas);
-
-        content.channels.push(channeli);
-
-        writeFile(channellistpath, JSON.stringify(content, null, 2) , FILE_OPTIONS, (error) => {
-            if (error) {
-                response.status(500).end();
-            }
-        })
-
-        readFile(templatefilepath, FILE_OPTIONS, (error, data) => {
-
-            if (error) {
-                response.status(500).end();
-                return
-            }
-
-            let filecontent = JSON.parse(data);
-            filecontent.name = channelname;
-            filecontent.fname = channelname;
-
-            writeFile(filepath, JSON.stringify(filecontent, null, 2) , FILE_OPTIONS, (error) => {
-                if (error) {
-                    response.status(500).end();
-                } else {
-                    response.redirect(`/channels/${channelname}`);
-                }
-            })
-        })
-    })*/
-
-
 app.listen(port, () => {
 console.log(`Example app listening at http://localhost:${port}`);
 })
